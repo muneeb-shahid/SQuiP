@@ -5,6 +5,7 @@ import 'package:stacked/stacked.dart';
 
 import '../../Services/Constants/appBarConstant.dart';
 import '../../Services/Constants/fontsConstant.dart';
+import '../../Services/Constants/textConstant.dart';
 import '../../ViewModel/UserModeViewModel/userViewModel.dart';
 
 class UserMode extends StatelessWidget {
@@ -21,17 +22,8 @@ class UserMode extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20, right: 20),
-                    child: Text(
-                      "Select which types of services do you want?",
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        fontSize: FontsConstants.sub_heading_font_size,
-                        fontFamily: FontsConstants.sub_heading_font_family,
-                      ),
-                    ),
-                  ),
+                  TextConstant().text_Funct("Select which types of services do you want?",),
+                 
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),

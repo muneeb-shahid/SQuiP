@@ -9,6 +9,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import '../Services/Constants/appBarConstant.dart';
 import '../Services/Constants/constantsColors.dart';
 import '../Services/Constants/fontsConstant.dart';
+import '../Services/Constants/textConstant.dart';
 import '../Services/gesturedetector.dart';
 import '../ViewModel/startingViewModel.dart';
 
@@ -30,13 +31,8 @@ class StartingView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
-                    "Please Select your Mode below.",
-                    style: TextStyle(
-                      fontSize: FontsConstants.sub_heading_font_size,
-                      fontFamily: FontsConstants.sub_heading_font_family,
-                    ),
-                  ),
+                   TextConstant().text_Funct( "Please select your mode below.",),
+                  
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
