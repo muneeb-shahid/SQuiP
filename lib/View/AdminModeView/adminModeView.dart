@@ -3,20 +3,21 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../ViewModel/UserViewModel/userViewModel.dart';
+import '../../ViewModel/AdminModeViewModel/adminModeViewModel.dart';
 
 
-class UserMode extends StatelessWidget {
-  const UserMode({super.key});
+
+class AdminMode extends StatelessWidget {
+  const AdminMode({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
-      viewModelBuilder: () => UserViewModel(),
+      viewModelBuilder: () => Admin_Mode_ViewModel(),
       builder: (context, viewModel, child) {
         return Scaffold(
           appBar: AppBar(
-            title: Text("User Mode"),
+            title: Text("Admin Mode"),
           ),
         );
       },

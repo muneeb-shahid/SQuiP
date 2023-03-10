@@ -6,6 +6,7 @@ import 'package:stacked/stacked_annotations.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../Services/Constants/appBarConstant.dart';
 import '../Services/Constants/constantsColors.dart';
 import '../Services/Constants/fontsConstant.dart';
 import '../Services/gesturedetector.dart';
@@ -20,19 +21,9 @@ class StartingView extends StatelessWidget {
       viewModelBuilder: () => StartingViewModel(),
       builder: (context, viewModel, child) {
         return Scaffold(
-          appBar: AppBar(
-            centerTitle: true,
-            backgroundColor: App_Colors.app_green_color,
-            title: Text(
-              "Public Helping Center",
-              style: TextStyle(
-                  wordSpacing: 1,
-                  letterSpacing: 2,
-                  fontSize: FontsConstants.heading_font_size,
-                  fontWeight: FontsConstants.font_weight,
-                  fontFamily: FontsConstants.heading_font_family),
-            ),
-          ),
+          appBar:  AppBar_Constants().appBar_Func("Public Helping Center"),
+          
+         
           body: Center(
             child: SingleChildScrollView(
               child: Column(
@@ -49,16 +40,33 @@ class StartingView extends StatelessWidget {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
-                  viewModel.gesture_Button.gestureButton_function(
-                      context, "User Mode", viewModel.navigateTo()),
+
+                  InkWell(
+                    onTap: () {
+                      viewModel.navigateToTheUserMode();
+                    },
+                    child: viewModel.gesture_Button.gestureButton_function(
+                      context,
+                      "User Mode",
+                    ),
+                  ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
+                  InkWell(
+                    onTap: () {
+                      viewModel.navigateToTheAdminMode();
+                    },
+                    child: viewModel.gesture_Button.gestureButton_function(
+                      context,
+                      "Admin Mode",
+                    ),
+                  ),
+
                   // viewModel.gesture_Button.gestureButton_function(
                   //     context,
                   //     "Admin Mode",
                   //     viewModel.navigateToAdminMode()),
-                
                 ],
               ),
             ),

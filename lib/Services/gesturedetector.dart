@@ -10,12 +10,11 @@ import 'Constants/constantsColors.dart';
 import 'Constants/fontsConstant.dart';
 
 class Gesture_Button {
-  
-  gestureButton_function(context,String text, navigate) {
+  gestureButton_function(
+    context,
+    String text,
+  ) {
     return GestureDetector(
-      onTap: () {
-        navigate;
-      },
       child: Padding(
         padding: EdgeInsets.only(
           left: 20,

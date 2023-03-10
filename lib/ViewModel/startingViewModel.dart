@@ -17,11 +17,11 @@ class StartingViewModel extends BaseViewModel {
     gesture_Button.gestureButton_function;
   }
 
-  navigateTo() {
+  navigateToTheUserMode() {
     navigationService.navigateToUserMode();
   }
 
-  // navigateToAdminMode() {
-  // navigationService.navigateToAdminView();
-  // }
+  navigateToTheAdminMode() {
+    navigationService.navigateToAdminMode();
+  }
 }
