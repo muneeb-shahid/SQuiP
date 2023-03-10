@@ -22,7 +22,10 @@ class SplashViewModel extends BaseViewModel {
 
   Widget typeAnimation() {
     return DefaultTextStyle(
-      style: TextStyle(fontSize: 18, color: App_Colors.app_black_color,fontFamily: FontsConstants.heading_font_family),
+      style: TextStyle(
+          fontSize: 18,
+          color: App_Colors.app_black_color,
+          fontFamily: FontsConstants.heading_font_family),
       child: AnimatedTextKit(
         animatedTexts: [
           TyperAnimatedText('Take the help of Police, Ambulance and',

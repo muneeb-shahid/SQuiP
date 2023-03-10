@@ -5,20 +5,23 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:app_/View/AdminModeView/adminModeView.dart' as _i5;
-import 'package:app_/View/adminView.dart' as _i7;
+import 'package:app_/View/AdminModeView/adminModeView.dart' as _i6;
+import 'package:app_/View/adminView.dart' as _i8;
+import 'package:app_/View/bottomNavView.dart' as _i3;
 import 'package:app_/View/SplashView.dart' as _i2;
-import 'package:app_/View/startingView.dart' as _i3;
-import 'package:app_/View/UserModeView/ambulanceView.dart' as _i8;
-import 'package:app_/View/UserModeView/firebridageview.dart' as _i9;
-import 'package:app_/View/UserModeView/policeview.dart' as _i6;
-import 'package:app_/View/UserModeView/userView.dart' as _i4;
+import 'package:app_/View/startingView.dart' as _i4;
+import 'package:app_/View/UserModeView/ambulanceView.dart' as _i9;
+import 'package:app_/View/UserModeView/firebridageview.dart' as _i10;
+import 'package:app_/View/UserModeView/policeview.dart' as _i7;
+import 'package:app_/View/UserModeView/userView.dart' as _i5;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i10;
+import 'package:stacked_services/stacked_services.dart' as _i11;
 
 class Routes {
   static const splashView = '/';
+
+  static const bottomNavView = '/bottom-nav-view';
 
   static const startingView = '/starting-view';
 
@@ -36,6 +39,7 @@ class Routes {
 
   static const all = <String>{
     splashView,
+    bottomNavView,
     startingView,
     userMode,
     adminMode,
@@ -53,32 +57,36 @@ class StackedRouter extends _i1.RouterBase {
       page: _i2.SplashView,
     ),
     _i1.RouteDef(
+      Routes.bottomNavView,
+      page: _i3.BottomNavView,
+    ),
+    _i1.RouteDef(
       Routes.startingView,
-      page: _i3.StartingView,
+      page: _i4.StartingView,
     ),
     _i1.RouteDef(
       Routes.userMode,
-      page: _i4.UserMode,
+      page: _i5.UserMode,
     ),
     _i1.RouteDef(
       Routes.adminMode,
-      page: _i5.AdminMode,
+      page: _i6.AdminMode,
     ),
     _i1.RouteDef(
       Routes.policeView,
-      page: _i6.PoliceView,
+      page: _i7.PoliceView,
     ),
     _i1.RouteDef(
       Routes.adminView,
-      page: _i7.AdminView,
+      page: _i8.AdminView,
     ),
     _i1.RouteDef(
       Routes.ambulanceView,
-      page: _i8.AmbulanceView,
+      page: _i9.AmbulanceView,
     ),
     _i1.RouteDef(
       Routes.fireBridageView,
-      page: _i9.FireBridageView,
+      page: _i10.FireBridageView,
     ),
   ];
 
@@ -89,45 +97,51 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i3.StartingView: (data) {
+    _i3.BottomNavView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.StartingView(),
+        builder: (context) => const _i3.BottomNavView(),
         settings: data,
       );
     },
-    _i4.UserMode: (data) {
+    _i4.StartingView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i4.UserMode(),
+        builder: (context) => const _i4.StartingView(),
         settings: data,
       );
     },
-    _i5.AdminMode: (data) {
+    _i5.UserMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i5.AdminMode(),
+        builder: (context) => const _i5.UserMode(),
         settings: data,
       );
     },
-    _i6.PoliceView: (data) {
+    _i6.AdminMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.PoliceView(),
+        builder: (context) => const _i6.AdminMode(),
         settings: data,
       );
     },
-    _i7.AdminView: (data) {
+    _i7.PoliceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i7.AdminView(),
+        builder: (context) => const _i7.PoliceView(),
         settings: data,
       );
     },
-    _i8.AmbulanceView: (data) {
+    _i8.AdminView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i8.AmbulanceView(),
+        builder: (context) => const _i8.AdminView(),
         settings: data,
       );
     },
-    _i9.FireBridageView: (data) {
+    _i9.AmbulanceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i9.FireBridageView(),
+        builder: (context) => const _i9.AmbulanceView(),
+        settings: data,
+      );
+    },
+    _i10.FireBridageView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const _i10.FireBridageView(),
         settings: data,
       );
     },
@@ -139,7 +153,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i10.NavigationService {
+extension NavigatorStateExtension on _i11.NavigationService {
   Future<dynamic> navigateToSplashView([
     int? routerId,
     bool preventDuplicates = true,
@@ -148,6 +162,20 @@ extension NavigatorStateExtension on _i10.NavigationService {
         transition,
   ]) async {
     return navigateTo<dynamic>(Routes.splashView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> navigateToBottomNavView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.bottomNavView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -260,6 +288,20 @@ extension NavigatorStateExtension on _i10.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.splashView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithBottomNavView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.bottomNavView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

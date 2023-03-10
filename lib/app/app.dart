@@ -11,8 +11,10 @@ import '../View/UserModeView/firebridageview.dart';
 import '../View/UserModeView/policeview.dart';
 import '../View/UserModeView/userView.dart';
 import '../View/adminView.dart';
+import '../View/bottomNavView.dart';
 @StackedApp(routes: [
   MaterialRoute(page: SplashView,initial: true),
+  MaterialRoute(page: BottomNavView),
   MaterialRoute(page: StartingView, ),
   MaterialRoute(page: UserMode,),
   MaterialRoute(page: AdminMode,),
