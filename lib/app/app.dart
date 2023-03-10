@@ -12,8 +12,7 @@ import '../View/UserModeView/userView.dart';
 import '../View/adminView.dart';
 
 @StackedApp(routes: [
-  MaterialRoute(page: StartingView, initial: true),
-
+  MaterialRoute(page: StartingView,initial: true ),
   MaterialRoute(page: UserMode,),
   MaterialRoute(page: AdminMode,),
   MaterialRoute(page: PoliceView),

@@ -64,6 +64,7 @@ class StartingView extends StatelessWidget {
                   // Text("Note: \nUser Mode is for PUBLIC \nAdmin Mode is for Police, Ambulance, Fire Bridage")
                 ],
               ),
+              
             ),
           ),
         );
