@@ -50,14 +50,14 @@ class StartingView extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   viewModel.gesture_Button.gestureButton_function(
-                      context, "User Mode", viewModel.navigateToUserModde()),
+                      context, "User Mode", viewModel.navigateTo()),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
-                  viewModel.gesture_Button.gestureButton_function(
-                      context,
-                      "Admin Mode",
-                      viewModel.navigateToAdminMode()),
+                  // viewModel.gesture_Button.gestureButton_function(
+                  //     context,
+                  //     "Admin Mode",
+                  //     viewModel.navigateToAdminMode()),
                 
                 ],
               ),

@@ -1,16 +1,20 @@
 import 'dart:ffi';
 
+import 'package:app_/app/app.router.dart';
 import 'package:get_it/get_it.dart';
 import 'package:flutter/material.dart';
+import 'package:stacked_services/stacked_services.dart';
 
+import '../app/app.locator.dart';
 import 'Constants/constantsColors.dart';
 import 'Constants/fontsConstant.dart';
 
 class Gesture_Button {
-  gestureButton_function(context,String text, function_calling) {
+  
+  gestureButton_function(context,String text, navigate) {
     return GestureDetector(
       onTap: () {
-        function_calling;
+        navigate;
       },
       child: Padding(
         padding: EdgeInsets.only(

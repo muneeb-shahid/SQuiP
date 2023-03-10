@@ -11,7 +11,7 @@ import '../View/adminView.dart';
   MaterialRoute(page: StartingView, initial: true),
 
   MaterialRoute(page: UserMode,),
-  MaterialRoute(page: AdminView,),
+  // MaterialRoute(page: AdminView,),
   // MaterialRoute(page: AdminMode,),
 
 
