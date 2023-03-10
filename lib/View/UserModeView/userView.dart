@@ -22,14 +22,15 @@ class UserMode extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  TextConstant().text_Funct("Select which types of services do you want?",),
-                 
+                  TextConstant().text_Funct(
+                    "Select which types of services do you want?",
+                  ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   InkWell(
                     onTap: () {
-                      viewModel.navigateToTheUserMode();
+                      viewModel.navigateToThePolice();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -41,7 +42,7 @@ class UserMode extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      viewModel.navigateToTheUserMode();
+                      viewModel.navigateToTheAmbulance();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -53,7 +54,7 @@ class UserMode extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      viewModel.navigateToTheUserMode();
+                      viewModel.navigateToTheFireBridage();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,

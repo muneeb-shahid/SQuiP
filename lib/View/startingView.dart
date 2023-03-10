@@ -58,11 +58,10 @@ class StartingView extends StatelessWidget {
                       "Admin Mode",
                     ),
                   ),
+                  
 
-                  // viewModel.gesture_Button.gestureButton_function(
-                  //     context,
-                  //     "Admin Mode",
-                  //     viewModel.navigateToAdminMode()),
+                 
+                  // Text("Note: \nUser Mode is for PUBLIC \nAdmin Mode is for Police, Ambulance, Fire Bridage")
                 ],
               ),
             ),

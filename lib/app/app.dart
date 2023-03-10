@@ -5,6 +5,9 @@ import 'package:stacked_services/stacked_services.dart';
 
 import '../Services/gesturedetector.dart';
 import '../View/AdminModeView/adminModeView.dart';
+import '../View/UserModeView/ambulanceView.dart';
+import '../View/UserModeView/firebridageview.dart';
+import '../View/UserModeView/policeview.dart';
 import '../View/UserModeView/userView.dart';
 import '../View/adminView.dart';
 
@@ -13,6 +16,12 @@ import '../View/adminView.dart';
 
   MaterialRoute(page: UserMode,),
   MaterialRoute(page: AdminMode,),
+  MaterialRoute(page: PoliceView),
+  MaterialRoute(page: AdminView),
+  MaterialRoute(page: AmbulanceView),
+  MaterialRoute(page: FireBridageView),
+
+  // MaterialRoute(page: AmbulanceView),
 
   // MaterialRoute(page: AdminView,),
   // MaterialRoute(page: AdminMode,),

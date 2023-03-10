@@ -7,23 +7,21 @@ import 'package:stacked_services/stacked_services.dart';
 import '../../Services/gesturedetector.dart';
 import '../../app/app.locator.dart';
 
-class UserViewModel extends BaseViewModel {
-  final navigationService = locator<NavigationService>();
+class FireBridageViewModel extends BaseViewModel {
+final navigationService = locator<NavigationService>();
   final gesture_Button = Gesture_Button();
 
   gest() {
     gesture_Button.gestureButton_function;
   }
 
-  navigateToThePolice() {
-    navigationService.navigateToPoliceView();
-  }
+  // navigateToTheUserMode() {
+  //   navigationService.navigateToUserMode();
+  // }
 
-  navigateToTheAmbulance() {
-    navigationService.navigateToAmbulanceView();
-  }
+  // navigateToTheAdminMode() {
+  //   navigationService.navigateToAdminMode();
+  // }
 
-  navigateToTheFireBridage() {
-    navigationService.navigateToFireBridageView();
-  }
+
 }
