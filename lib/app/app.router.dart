@@ -5,19 +5,22 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:app_/View/AdminModeView/adminModeView.dart' as _i4;
-import 'package:app_/View/adminView.dart' as _i6;
-import 'package:app_/View/startingView.dart' as _i2;
-import 'package:app_/View/UserModeView/ambulanceView.dart' as _i7;
-import 'package:app_/View/UserModeView/firebridageview.dart' as _i8;
-import 'package:app_/View/UserModeView/policeview.dart' as _i5;
-import 'package:app_/View/UserModeView/userView.dart' as _i3;
+import 'package:app_/View/AdminModeView/adminModeView.dart' as _i5;
+import 'package:app_/View/adminView.dart' as _i7;
+import 'package:app_/View/SplashView.dart' as _i2;
+import 'package:app_/View/startingView.dart' as _i3;
+import 'package:app_/View/UserModeView/ambulanceView.dart' as _i8;
+import 'package:app_/View/UserModeView/firebridageview.dart' as _i9;
+import 'package:app_/View/UserModeView/policeview.dart' as _i6;
+import 'package:app_/View/UserModeView/userView.dart' as _i4;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i9;
+import 'package:stacked_services/stacked_services.dart' as _i10;
 
 class Routes {
-  static const startingView = '/';
+  static const splashView = '/';
+
+  static const startingView = '/starting-view';
 
   static const userMode = '/user-mode';
 
@@ -32,6 +35,7 @@ class Routes {
   static const fireBridageView = '/fire-bridage-view';
 
   static const all = <String>{
+    splashView,
     startingView,
     userMode,
     adminMode,
@@ -45,75 +49,85 @@ class Routes {
 class StackedRouter extends _i1.RouterBase {
   final _routes = <_i1.RouteDef>[
     _i1.RouteDef(
+      Routes.splashView,
+      page: _i2.SplashView,
+    ),
+    _i1.RouteDef(
       Routes.startingView,
-      page: _i2.StartingView,
+      page: _i3.StartingView,
     ),
     _i1.RouteDef(
       Routes.userMode,
-      page: _i3.UserMode,
+      page: _i4.UserMode,
     ),
     _i1.RouteDef(
       Routes.adminMode,
-      page: _i4.AdminMode,
+      page: _i5.AdminMode,
     ),
     _i1.RouteDef(
       Routes.policeView,
-      page: _i5.PoliceView,
+      page: _i6.PoliceView,
     ),
     _i1.RouteDef(
       Routes.adminView,
-      page: _i6.AdminView,
+      page: _i7.AdminView,
     ),
     _i1.RouteDef(
       Routes.ambulanceView,
-      page: _i7.AmbulanceView,
+      page: _i8.AmbulanceView,
     ),
     _i1.RouteDef(
       Routes.fireBridageView,
-      page: _i8.FireBridageView,
+      page: _i9.FireBridageView,
     ),
   ];
 
   final _pagesMap = <Type, _i1.StackedRouteFactory>{
-    _i2.StartingView: (data) {
+    _i2.SplashView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i2.StartingView(),
+        builder: (context) => const _i2.SplashView(),
         settings: data,
       );
     },
-    _i3.UserMode: (data) {
+    _i3.StartingView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.UserMode(),
+        builder: (context) => const _i3.StartingView(),
         settings: data,
       );
     },
-    _i4.AdminMode: (data) {
+    _i4.UserMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i4.AdminMode(),
+        builder: (context) => const _i4.UserMode(),
         settings: data,
       );
     },
-    _i5.PoliceView: (data) {
+    _i5.AdminMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i5.PoliceView(),
+        builder: (context) => const _i5.AdminMode(),
         settings: data,
       );
     },
-    _i6.AdminView: (data) {
+    _i6.PoliceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.AdminView(),
+        builder: (context) => const _i6.PoliceView(),
         settings: data,
       );
     },
-    _i7.AmbulanceView: (data) {
+    _i7.AdminView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i7.AmbulanceView(),
+        builder: (context) => const _i7.AdminView(),
         settings: data,
       );
     },
-    _i8.FireBridageView: (data) {
+    _i8.AmbulanceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i8.FireBridageView(),
+        builder: (context) => const _i8.AmbulanceView(),
+        settings: data,
+      );
+    },
+    _i9.FireBridageView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const _i9.FireBridageView(),
         settings: data,
       );
     },
@@ -125,7 +139,21 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i9.NavigationService {
+extension NavigatorStateExtension on _i10.NavigationService {
+  Future<dynamic> navigateToSplashView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.splashView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
   Future<dynamic> navigateToStartingView([
     int? routerId,
     bool preventDuplicates = true,
@@ -218,6 +246,20 @@ extension NavigatorStateExtension on _i9.NavigationService {
         transition,
   ]) async {
     return navigateTo<dynamic>(Routes.fireBridageView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithSplashView([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.splashView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
