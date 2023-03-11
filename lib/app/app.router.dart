@@ -5,23 +5,26 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:app_/View/AdminModeView/adminModeView.dart' as _i8;
-import 'package:app_/View/adminView.dart' as _i10;
-import 'package:app_/View/bottomNavView.dart' as _i5;
+import 'package:app_/View/AdminModeView/adminModeView.dart' as _i9;
+import 'package:app_/View/adminView.dart' as _i11;
+import 'package:app_/View/bottomNavView.dart' as _i6;
 import 'package:app_/View/SplashView.dart' as _i2;
-import 'package:app_/View/startingView.dart' as _i6;
-import 'package:app_/View/UserModeView/ambulanceView.dart' as _i11;
-import 'package:app_/View/UserModeView/firebridageview.dart' as _i12;
-import 'package:app_/View/UserModeView/loginView.dart' as _i3;
-import 'package:app_/View/UserModeView/policeview.dart' as _i9;
-import 'package:app_/View/UserModeView/signupview.dart' as _i4;
-import 'package:app_/View/UserModeView/userView.dart' as _i7;
+import 'package:app_/View/startingView.dart' as _i7;
+import 'package:app_/View/UserModeView/ambulanceView.dart' as _i12;
+import 'package:app_/View/UserModeView/firebridageview.dart' as _i13;
+import 'package:app_/View/UserModeView/googlemap.dart' as _i3;
+import 'package:app_/View/UserModeView/loginView.dart' as _i4;
+import 'package:app_/View/UserModeView/policeview.dart' as _i10;
+import 'package:app_/View/UserModeView/signupview.dart' as _i5;
+import 'package:app_/View/UserModeView/userView.dart' as _i8;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i13;
+import 'package:stacked_services/stacked_services.dart' as _i14;
 
 class Routes {
   static const splashView = '/';
+
+  static const googleMapClass = '/google-map-class';
 
   static const loginPage = '/login-page';
 
@@ -45,6 +48,7 @@ class Routes {
 
   static const all = <String>{
     splashView,
+    googleMapClass,
     loginPage,
     signUpPage,
     bottomNav,
@@ -65,44 +69,48 @@ class StackedRouter extends _i1.RouterBase {
       page: _i2.SplashView,
     ),
     _i1.RouteDef(
+      Routes.googleMapClass,
+      page: _i3.GoogleMapClass,
+    ),
+    _i1.RouteDef(
       Routes.loginPage,
-      page: _i3.LoginPage,
+      page: _i4.LoginPage,
     ),
     _i1.RouteDef(
       Routes.signUpPage,
-      page: _i4.SignUpPage,
+      page: _i5.SignUpPage,
     ),
     _i1.RouteDef(
       Routes.bottomNav,
-      page: _i5.BottomNav,
+      page: _i6.BottomNav,
     ),
     _i1.RouteDef(
       Routes.startingView,
-      page: _i6.StartingView,
+      page: _i7.StartingView,
     ),
     _i1.RouteDef(
       Routes.userMode,
-      page: _i7.UserMode,
+      page: _i8.UserMode,
     ),
     _i1.RouteDef(
       Routes.adminMode,
-      page: _i8.AdminMode,
+      page: _i9.AdminMode,
     ),
     _i1.RouteDef(
       Routes.policeView,
-      page: _i9.PoliceView,
+      page: _i10.PoliceView,
     ),
     _i1.RouteDef(
       Routes.adminView,
-      page: _i10.AdminView,
+      page: _i11.AdminView,
     ),
     _i1.RouteDef(
       Routes.ambulanceView,
-      page: _i11.AmbulanceView,
+      page: _i12.AmbulanceView,
     ),
     _i1.RouteDef(
       Routes.fireBridageView,
-      page: _i12.FireBridageView,
+      page: _i13.FireBridageView,
     ),
   ];
 
@@ -113,63 +121,69 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i3.LoginPage: (data) {
+    _i3.GoogleMapClass: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => _i3.LoginPage(),
+        builder: (context) => const _i3.GoogleMapClass(),
         settings: data,
       );
     },
-    _i4.SignUpPage: (data) {
+    _i4.LoginPage: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => _i4.SignUpPage(),
+        builder: (context) => _i4.LoginPage(),
         settings: data,
       );
     },
-    _i5.BottomNav: (data) {
+    _i5.SignUpPage: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i5.BottomNav(),
+        builder: (context) => _i5.SignUpPage(),
         settings: data,
       );
     },
-    _i6.StartingView: (data) {
+    _i6.BottomNav: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i6.StartingView(),
+        builder: (context) => const _i6.BottomNav(),
         settings: data,
       );
     },
-    _i7.UserMode: (data) {
+    _i7.StartingView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i7.UserMode(),
+        builder: (context) => const _i7.StartingView(),
         settings: data,
       );
     },
-    _i8.AdminMode: (data) {
+    _i8.UserMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i8.AdminMode(),
+        builder: (context) => const _i8.UserMode(),
         settings: data,
       );
     },
-    _i9.PoliceView: (data) {
+    _i9.AdminMode: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i9.PoliceView(),
+        builder: (context) => const _i9.AdminMode(),
         settings: data,
       );
     },
-    _i10.AdminView: (data) {
+    _i10.PoliceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i10.AdminView(),
+        builder: (context) => const _i10.PoliceView(),
         settings: data,
       );
     },
-    _i11.AmbulanceView: (data) {
+    _i11.AdminView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i11.AmbulanceView(),
+        builder: (context) => const _i11.AdminView(),
         settings: data,
       );
     },
-    _i12.FireBridageView: (data) {
+    _i12.AmbulanceView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i12.FireBridageView(),
+        builder: (context) => const _i12.AmbulanceView(),
+        settings: data,
+      );
+    },
+    _i13.FireBridageView: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const _i13.FireBridageView(),
         settings: data,
       );
     },
@@ -181,7 +195,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i13.NavigationService {
+extension NavigatorStateExtension on _i14.NavigationService {
   Future<dynamic> navigateToSplashView([
     int? routerId,
     bool preventDuplicates = true,
@@ -190,6 +204,20 @@ extension NavigatorStateExtension on _i13.NavigationService {
         transition,
   ]) async {
     return navigateTo<dynamic>(Routes.splashView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> navigateToGoogleMapClass([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.googleMapClass,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -344,6 +372,20 @@ extension NavigatorStateExtension on _i13.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.splashView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithGoogleMapClass([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.googleMapClass,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

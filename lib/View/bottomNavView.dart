@@ -2,6 +2,7 @@ import 'package:app_/View/AdminModeView/adminModeView.dart';
 import 'package:app_/View/UserModeView/userView.dart';
 import 'package:flutter/material.dart';
 
+import 'UserModeView/googlemap.dart';
 import 'UserModeView/policeview.dart';
 import 'startingView.dart';
 
@@ -23,7 +24,7 @@ class _BottomNavState extends State<BottomNav> {
     Center(
       child: Text("Screen 2"),
     ),
-    Center(child: Text("Screen 3")),
+    Center(child: GoogleMapClass()),
     Center(child: Text("Screen 4")),
   ];
   @override
