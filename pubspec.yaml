@@ -38,6 +38,12 @@ dependencies:
   animated_text_kit: ^4.2.2
   stacked: ^3.1.1
   stacked_services: ^0.9.9
+  firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
+  firebase_storage: ^11.0.10
+  cloud_firestore: ^4.3.1
+  fluttertoast: ^8.1.2
+  email_validator: '^2.1.16'
 
 dev_dependencies:
   flutter_test:

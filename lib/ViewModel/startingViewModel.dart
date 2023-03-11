@@ -17,6 +17,10 @@ class StartingViewModel extends BaseViewModel {
     gesture_Button.gestureButton_function;
   }
 
+  navigateToTheLoginScreen() {
+    navigationService.navigateToLoginPage();
+  }
+
   navigateToTheUserMode() {
     navigationService.navigateToUserMode();
     // navigationService.
