@@ -2,6 +2,7 @@ import 'package:app_/View/AdminModeView/adminModeView.dart';
 import 'package:app_/View/UserModeView/userView.dart';
 import 'package:flutter/material.dart';
 
+import 'UserModeView/policeview.dart';
 import 'startingView.dart';
 
 class BottomNav extends StatefulWidget {
@@ -16,6 +17,8 @@ class _BottomNavState extends State<BottomNav> {
   final screens = [
     Center(
       child: UserMode(),
+      
+
     ),
     Center(
       child: Text("Screen 2"),
@@ -55,10 +58,10 @@ class _BottomNavState extends State<BottomNav> {
               ),
               BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.shopping_bag_outlined,
+                  Icons.location_on_outlined,
                   color: Colors.black,
                 ),
-                label: "Shopping",
+                label: "Map",
               ),
               BottomNavigationBarItem(
                 icon: Icon(
