@@ -21,7 +21,7 @@ import 'package:stacked_services/stacked_services.dart' as _i11;
 class Routes {
   static const splashView = '/';
 
-  static const bottomNavView = '/bottom-nav-view';
+  static const bottomNav = '/bottom-nav';
 
   static const startingView = '/starting-view';
 
@@ -39,7 +39,7 @@ class Routes {
 
   static const all = <String>{
     splashView,
-    bottomNavView,
+    bottomNav,
     startingView,
     userMode,
     adminMode,
@@ -57,8 +57,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i2.SplashView,
     ),
     _i1.RouteDef(
-      Routes.bottomNavView,
-      page: _i3.BottomNavView,
+      Routes.bottomNav,
+      page: _i3.BottomNav,
     ),
     _i1.RouteDef(
       Routes.startingView,
@@ -97,9 +97,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i3.BottomNavView: (data) {
+    _i3.BottomNav: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.BottomNavView(),
+        builder: (context) => const _i3.BottomNav(),
         settings: data,
       );
     },
@@ -168,14 +168,14 @@ extension NavigatorStateExtension on _i11.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToBottomNavView([
+  Future<dynamic> navigateToBottomNav([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.bottomNavView,
+    return navigateTo<dynamic>(Routes.bottomNav,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -294,14 +294,14 @@ extension NavigatorStateExtension on _i11.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithBottomNavView([
+  Future<dynamic> replaceWithBottomNav([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.bottomNavView,
+    return replaceWith<dynamic>(Routes.bottomNav,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

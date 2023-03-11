@@ -19,6 +19,7 @@ class StartingViewModel extends BaseViewModel {
 
   navigateToTheUserMode() {
     navigationService.navigateToUserMode();
+    // navigationService.
   }
 
   navigateToTheAdminMode() {

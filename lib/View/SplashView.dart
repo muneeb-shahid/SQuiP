@@ -15,33 +15,33 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       onViewModelReady: (viewModel) {
-        Timer(Duration(seconds: 15), () {
+        Timer(Duration(seconds: 8), () {
           viewModel.navigateToTheStartingView();
         });
       },
       viewModelBuilder: () => SplashViewModel(),
       builder: (context, viewModel, child) {
         return Scaffold(
-            
             body: SafeArea(
-              top: true,
-              child: Column(
-                children: [
-                  Image(
-                    image: AssetImage("assets/images/hand image.png")),
-                  SizedBox(height: MediaQuery.of(context).size.height*0.2,),
-                  viewModel.typeAnimation(),
-                  SizedBox(height: MediaQuery.of(context).size.height*0.03,),
-                  InkWell(
-                       
-                    onTap: () =>  viewModel.navigateToTheStartingView(),
-                    child:   viewModel.gesture_Button.gestureButton_function(context, "Get Stared"),
-                  ),
-          
-             
-                ],
+          top: true,
+          child: Column(
+            children: [
+              Image(image: AssetImage("assets/images/hand image.png")),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.2,
               ),
-            ));
+              viewModel.typeAnimation(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              InkWell(
+                onTap: () => viewModel.navigateToTheStartingView(),
+                child: viewModel.gesture_Button
+                    .gestureButton_function(context, "Get Stared"),
+              ),
+            ],
+          ),
+        ));
       },
     );
   }

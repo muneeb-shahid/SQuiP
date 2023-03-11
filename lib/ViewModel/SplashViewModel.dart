@@ -20,6 +20,10 @@ class SplashViewModel extends BaseViewModel {
     navigationService.navigateToStartingView();
   }
 
+  navigateToTheBottomVav() {
+    navigationService.navigateToBottomNav();
+  }
+
   Widget typeAnimation() {
     return DefaultTextStyle(
       style: TextStyle(

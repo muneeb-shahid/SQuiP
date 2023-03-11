@@ -14,7 +14,7 @@ import '../View/adminView.dart';
 import '../View/bottomNavView.dart';
 @StackedApp(routes: [
   MaterialRoute(page: SplashView,initial: true),
-  MaterialRoute(page: BottomNavView),
+  MaterialRoute(page: BottomNav),
   MaterialRoute(page: StartingView, ),
   MaterialRoute(page: UserMode,),
   MaterialRoute(page: AdminMode,),
