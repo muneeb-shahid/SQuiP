@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../Services/Constants/appBarConstant.dart';
 import '../../Services/Constants/constantsColors.dart';
 import '../../Services/Constants/fontsConstant.dart';
+import '../bottomNavView.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -34,7 +35,7 @@ class _LoginPageState extends State<LoginPage> {
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => UserMode(),
+                builder: (context) => BottomNav(),
               )).then((value) {
             setState(() {
               loading = false;
