@@ -14,12 +14,13 @@ import 'package:app_/View/UserModeView/ambulanceView.dart' as _i12;
 import 'package:app_/View/UserModeView/firebridageview.dart' as _i13;
 import 'package:app_/View/UserModeView/googlemap.dart' as _i3;
 import 'package:app_/View/UserModeView/loginView.dart' as _i4;
+import 'package:app_/View/UserModeView/notification.dart' as _i14;
 import 'package:app_/View/UserModeView/policeview.dart' as _i10;
 import 'package:app_/View/UserModeView/signupview.dart' as _i5;
 import 'package:app_/View/UserModeView/userView.dart' as _i8;
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart' as _i1;
-import 'package:stacked_services/stacked_services.dart' as _i14;
+import 'package:stacked_services/stacked_services.dart' as _i15;
 
 class Routes {
   static const splashView = '/';
@@ -46,6 +47,8 @@ class Routes {
 
   static const fireBridageView = '/fire-bridage-view';
 
+  static const showNotification = '/show-notification';
+
   static const all = <String>{
     splashView,
     googleMapClass,
@@ -59,6 +62,7 @@ class Routes {
     adminView,
     ambulanceView,
     fireBridageView,
+    showNotification,
   };
 }
 
@@ -111,6 +115,10 @@ class StackedRouter extends _i1.RouterBase {
     _i1.RouteDef(
       Routes.fireBridageView,
       page: _i13.FireBridageView,
+    ),
+    _i1.RouteDef(
+      Routes.showNotification,
+      page: _i14.ShowNotification,
     ),
   ];
 
@@ -187,6 +195,12 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
+    _i14.ShowNotification: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => const _i14.ShowNotification(),
+        settings: data,
+      );
+    },
   };
 
   @override
@@ -195,7 +209,7 @@ class StackedRouter extends _i1.RouterBase {
   Map<Type, _i1.StackedRouteFactory> get pagesMap => _pagesMap;
 }
 
-extension NavigatorStateExtension on _i14.NavigationService {
+extension NavigatorStateExtension on _i15.NavigationService {
   Future<dynamic> navigateToSplashView([
     int? routerId,
     bool preventDuplicates = true,
@@ -364,6 +378,20 @@ extension NavigatorStateExtension on _i14.NavigationService {
         transition: transition);
   }
 
+  Future<dynamic> navigateToShowNotification([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return navigateTo<dynamic>(Routes.showNotification,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
   Future<dynamic> replaceWithSplashView([
     int? routerId,
     bool preventDuplicates = true,
@@ -526,6 +554,20 @@ extension NavigatorStateExtension on _i14.NavigationService {
         transition,
   ]) async {
     return replaceWith<dynamic>(Routes.fireBridageView,
+        id: routerId,
+        preventDuplicates: preventDuplicates,
+        parameters: parameters,
+        transition: transition);
+  }
+
+  Future<dynamic> replaceWithShowNotification([
+    int? routerId,
+    bool preventDuplicates = true,
+    Map<String, String>? parameters,
+    Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
+        transition,
+  ]) async {
+    return replaceWith<dynamic>(Routes.showNotification,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

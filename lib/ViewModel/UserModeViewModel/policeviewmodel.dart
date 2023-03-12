@@ -1,3 +1,5 @@
+import 'package:app_/Services/notificationService.dart';
+import 'package:app_/Services/notificationService.dart';
 import 'package:app_/app/app.router.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -5,11 +7,18 @@ import 'package:stacked_services/stacked_services.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../../Services/gesturedetector.dart';
+import '../../Services/notificationService.dart';
+import '../../Services/notificationService.dart';
 import '../../app/app.locator.dart';
 
 class PoliceViewModel extends BaseViewModel {
-final navigationService = locator<NavigationService>();
+  final navigationService = locator<NavigationService>();
   final gesture_Button = Gesture_Button();
+  final show_navigation = locator<Notification_Service>();
+
+  showNotificationOnScreen() {
+    show_navigation.showNotification();
+  }
 
   gest() {
     gesture_Button.gestureButton_function;
@@ -22,6 +31,4 @@ final navigationService = locator<NavigationService>();
   // navigateToTheAdminMode() {
   //   navigationService.navigateToAdminMode();
   // }
-
-
 }

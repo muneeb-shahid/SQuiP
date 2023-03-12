@@ -4,12 +4,14 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 
 import '../Services/gesturedetector.dart';
+import '../Services/notificationService.dart';
 import '../View/AdminModeView/adminModeView.dart';
 import '../View/SplashView.dart';
 import '../View/UserModeView/ambulanceView.dart';
 import '../View/UserModeView/firebridageview.dart';
 import '../View/UserModeView/googlemap.dart';
 import '../View/UserModeView/loginView.dart';
+import '../View/UserModeView/notification.dart';
 import '../View/UserModeView/policeview.dart';
 import '../View/UserModeView/signupview.dart';
 import '../View/UserModeView/userView.dart';
@@ -28,6 +30,7 @@ import '../View/bottomNavView.dart';
   MaterialRoute(page: AdminView),
   MaterialRoute(page: AmbulanceView),
   MaterialRoute(page: FireBridageView),
+  MaterialRoute(page: ShowNotification),
 
 
 
@@ -35,6 +38,7 @@ import '../View/bottomNavView.dart';
 ], dependencies: [
   Singleton(classType: NavigationService),
   LazySingleton(classType: Gesture_Button),
+  LazySingleton(classType: Notification_Service),
   
 
 ])

@@ -1,3 +1,4 @@
+import 'package:app_/Services/Constants/appBarConstant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -16,9 +17,7 @@ class AdminMode extends StatelessWidget {
       viewModelBuilder: () => Admin_Mode_ViewModel(),
       builder: (context, viewModel, child) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text("Admin Mode"),
-          ),
+          appBar: AppBar_Constants().appBar_Func("Admin Mode")
         );
       },
     );

@@ -28,8 +28,7 @@ class AmbulanceView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheAmbulanceView();
-                    },
+ viewModel.showNotificationOnScreen();                    },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
                       "Medical Emergency",
@@ -40,8 +39,7 @@ class AmbulanceView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheAmbulanceView();
-                    },
+ viewModel.showNotificationOnScreen();                    },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
                       "Fire",
@@ -52,8 +50,7 @@ class AmbulanceView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheAmbulanceView();
-                    },
+ viewModel.showNotificationOnScreen();                    },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
                       "Accident",

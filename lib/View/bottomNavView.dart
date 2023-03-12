@@ -22,11 +22,11 @@ class _BottomNavState extends State<BottomNav> {
       
 
     ),
-    Center(
-      child: Text("Screen 2"),
-    ),
     Center(child: GoogleMapClass()),
-    Center(child: Text("Screen 4")),
+    // Center(
+    //   child: Text("Screen 2"),
+    // ),
+    // Center(child: Text("Screen 4")),
   ];
   @override
   Widget build(BuildContext context) {
@@ -52,14 +52,14 @@ class _BottomNavState extends State<BottomNav> {
                 ),
                 label: "Home",
               ),
-              BottomNavigationBarItem(
-                   activeIcon: Icon(Icons.favorite),
-                icon: Icon(
-                  Icons.favorite_border_outlined,
-                  color: App_Colors.app_white_color,
-                ),
-                label: "Favorite",
-              ),
+              // BottomNavigationBarItem(
+              //      activeIcon: Icon(Icons.favorite),
+              //   icon: Icon(
+              //     Icons.favorite_border_outlined,
+              //     color: App_Colors.app_white_color,
+              //   ),
+              //   label: "Favorite",
+              // ),
               BottomNavigationBarItem(
                 activeIcon: Icon(Icons.location_on),
                 icon: Icon(
@@ -68,14 +68,14 @@ class _BottomNavState extends State<BottomNav> {
                 ),
                 label: "Map",
               ),
-              BottomNavigationBarItem(
-                   activeIcon: Icon(Icons.person_2),
-                icon: Icon(
-                  Icons.person_2_outlined,
-                  color: App_Colors.app_white_color,
-                ),
-                label: "User",
-              ),
+              // BottomNavigationBarItem(
+              //      activeIcon: Icon(Icons.person_2),
+              //   icon: Icon(
+              //     Icons.person_2_outlined,
+              //     color: App_Colors.app_white_color,
+              //   ),
+              //   label: "User",
+              // ),
             ]));
   }
 }

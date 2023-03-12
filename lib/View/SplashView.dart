@@ -6,6 +6,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:stacked/stacked.dart';
 
+import '../Services/Constants/appBarConstant.dart';
 import '../ViewModel/SplashViewModel.dart';
 
 class SplashView extends StatelessWidget {
@@ -28,7 +29,11 @@ class SplashView extends StatelessWidget {
             children: [
               Image(image: AssetImage("assets/images/hand image.png")),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.2,
+                height: MediaQuery.of(context).size.height * 0.1,
+              ),
+              Text("SQuiP",style: TextStyle(fontSize: 30,color: App_Colors.app_black_color,fontFamily: 'Inter',letterSpacing: 1 , wordSpacing: 1,fontWeight: FontWeight.w700),),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
               viewModel.typeAnimation(),
               SizedBox(

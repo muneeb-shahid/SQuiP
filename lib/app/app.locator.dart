@@ -10,6 +10,7 @@ import 'package:stacked_core/stacked_core.dart';
 import 'package:stacked_services/src/navigation/navigation_service.dart';
 
 import '../Services/gesturedetector.dart';
+import '../Services/notificationService.dart';
 
 final locator = StackedLocator.instance;
 
@@ -22,4 +23,5 @@ Future<void> setupLocator(
 // Register dependencies
   locator.registerSingleton(NavigationService());
   locator.registerLazySingleton(() => Gesture_Button());
+  locator.registerLazySingleton(() => Notification_Service());
 }

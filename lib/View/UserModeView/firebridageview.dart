@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -29,7 +27,7 @@ class FireBridageView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheFireBridageView();
+                      viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -41,7 +39,7 @@ class FireBridageView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheFireBridageView();
+                      viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -53,7 +51,7 @@ class FireBridageView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToTheFireBridageView();
+                      viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,

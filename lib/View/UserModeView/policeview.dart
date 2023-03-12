@@ -18,19 +18,19 @@ class PoliceView extends StatelessWidget {
       builder: (context, viewModel, child) {
         return Scaffold(
           appBar: AppBar_Constants().appBar_Func("Police Services"),
-          
           body: Center(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  TextConstant().text_Funct("Select your emergency level",),
-                 
+                  TextConstant().text_Funct(
+                    "Select your emergency level",
+                  ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToThePoliceView();
+                       viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -42,7 +42,7 @@ class PoliceView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToThePoliceView();
+                      viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -54,7 +54,7 @@ class PoliceView extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      // viewModel.navigateToThePoliceView();
+                      viewModel.showNotificationOnScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,
@@ -65,8 +65,6 @@ class PoliceView extends StatelessWidget {
               ),
             ),
           ),
-        
-        
         );
       },
     );
