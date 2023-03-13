@@ -93,8 +93,9 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
             ),
             Container(
               height: MediaQuery.of(context).size.height * 0.15,
+              width: MediaQuery.of(context).size.height * 0.3,
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.transparent,
                   //  borderRadius: BorderRadius.circular(40)
                   ),
               child: Column(
@@ -152,8 +153,8 @@ class _CurrentLocationScreenState extends State<CurrentLocationScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(address,   textAlign: TextAlign.justify, style: TextStyle(color:App_Colors.app_black_color,fontSize: FontsConstants.text_font_size, ),),
+                    padding: const EdgeInsets.only(bottom:17),
+                    child: Text(address,   textAlign: TextAlign.center, style: TextStyle(color:App_Colors.app_black_theme,fontSize: FontsConstants.text_font_size, ),),
                   )
                 ],
               ),
