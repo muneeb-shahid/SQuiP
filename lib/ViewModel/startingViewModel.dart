@@ -18,7 +18,7 @@ class StartingViewModel extends BaseViewModel {
   }
 
   navigateToTheLoginScreen() {
-    navigationService.navigateToLoginPage();
+    navigationService.navigateToUserLoginView();
   }
 
   navigateToTheUserMode() {
@@ -27,6 +27,11 @@ class StartingViewModel extends BaseViewModel {
   }
 
   navigateToTheAdminMode() {
-    navigationService.navigateToAdminMode();
+    navigationService.navigateToAdminView();
+  }
+
+  navigateToTheAdminLoginScreen() {
+    navigationService.navigateToUserLoginView();
+
   }
 }

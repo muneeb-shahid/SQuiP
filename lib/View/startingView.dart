@@ -52,6 +52,7 @@ class StartingView extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       viewModel.navigateToTheAdminMode();
+                      //  viewModel.navigateToTheLoginScreen();
                     },
                     child: viewModel.gesture_Button.gestureButton_function(
                       context,

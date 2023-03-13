@@ -28,7 +28,7 @@ class _SignUpPageState extends State<SignUpPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => LoginPage(),
+              builder: (context) => UserLoginView(),
             ));
         final User? user = (await FirebaseAuth.instance
             .createUserWithEmailAndPassword(
@@ -47,15 +47,8 @@ class _SignUpPageState extends State<SignUpPage> {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => LoginPage(),
+              builder: (context) => UserLoginView(),
             ));
-        //     ),)
-        // Navigator.pushAndRemoveUntil(
-        //     context,
-        //     MaterialPageRoute(
-        //       builder: (context) => LoginPage(),
-        //     ),
-        //     (route) => false);
       } on FirebaseAuthException catch (e) {
         if (e.code == 'email-already-in-use') {
           print("Account Already exists");
@@ -207,35 +200,9 @@ class _SignUpPageState extends State<SignUpPage> {
                         ],
                       ),
 
-                      // SizedBox(
-                      //   height: 16.0,
-                      // ),
+                   
 
-                      // ElevatedButton(
-                      // onPressed: _register,
-                      // if (_formKey.currentState!.validate()) {
-                      //   Navigator.push(
-                      //       context,
-                      //       MaterialPageRoute(
-                      //         builder: (context) => LoginPage(),
-                      //       ));
-                      // }
-
-                      //   child: Text('Sign Up'),
-                      // ),
-                      // SizedBox(
-                      //   height: 20,
-                      // ),
-                      // ElevatedButton(
-                      //   onPressed: () {
-                      //     Navigator.pushReplacement(
-                      //         context,
-                      //         MaterialPageRoute(
-                      //           builder: (context) => LoginPage(),
-                      //         ));
-                      //   },
-                      //   child: Text('go to login page'),
-                      // ),
+                    
                     ],
                   ),
                 ),

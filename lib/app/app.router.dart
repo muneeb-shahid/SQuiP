@@ -5,8 +5,8 @@
 // **************************************************************************
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:app_/View/AdminModeView/adminModeView.dart' as _i9;
-import 'package:app_/View/adminView.dart' as _i11;
+import 'package:app_/View/AdminModeView/Adminloginview.dart' as _i9;
+import 'package:app_/View/AdminModeView/adminView.dart' as _i11;
 import 'package:app_/View/bottomNavView.dart' as _i6;
 import 'package:app_/View/SplashView.dart' as _i2;
 import 'package:app_/View/startingView.dart' as _i7;
@@ -27,7 +27,7 @@ class Routes {
 
   static const googleMapClass = '/google-map-class';
 
-  static const loginPage = '/login-page';
+  static const userLoginView = '/user-login-view';
 
   static const signUpPage = '/sign-up-page';
 
@@ -37,7 +37,7 @@ class Routes {
 
   static const userMode = '/user-mode';
 
-  static const adminMode = '/admin-mode';
+  static const adminLoginView = '/admin-login-view';
 
   static const policeView = '/police-view';
 
@@ -52,12 +52,12 @@ class Routes {
   static const all = <String>{
     splashView,
     googleMapClass,
-    loginPage,
+    userLoginView,
     signUpPage,
     bottomNav,
     startingView,
     userMode,
-    adminMode,
+    adminLoginView,
     policeView,
     adminView,
     ambulanceView,
@@ -77,8 +77,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i3.GoogleMapClass,
     ),
     _i1.RouteDef(
-      Routes.loginPage,
-      page: _i4.LoginPage,
+      Routes.userLoginView,
+      page: _i4.UserLoginView,
     ),
     _i1.RouteDef(
       Routes.signUpPage,
@@ -97,8 +97,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i8.UserMode,
     ),
     _i1.RouteDef(
-      Routes.adminMode,
-      page: _i9.AdminMode,
+      Routes.adminLoginView,
+      page: _i9.AdminLoginView,
     ),
     _i1.RouteDef(
       Routes.policeView,
@@ -135,9 +135,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i4.LoginPage: (data) {
+    _i4.UserLoginView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => _i4.LoginPage(),
+        builder: (context) => _i4.UserLoginView(),
         settings: data,
       );
     },
@@ -165,9 +165,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i9.AdminMode: (data) {
+    _i9.AdminLoginView: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i9.AdminMode(),
+        builder: (context) => _i9.AdminLoginView(),
         settings: data,
       );
     },
@@ -238,14 +238,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToLoginPage([
+  Future<dynamic> navigateToUserLoginView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.loginPage,
+    return navigateTo<dynamic>(Routes.userLoginView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -308,14 +308,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToAdminMode([
+  Future<dynamic> navigateToAdminLoginView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.adminMode,
+    return navigateTo<dynamic>(Routes.adminLoginView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -420,14 +420,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithLoginPage([
+  Future<dynamic> replaceWithUserLoginView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.loginPage,
+    return replaceWith<dynamic>(Routes.userLoginView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -490,14 +490,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithAdminMode([
+  Future<dynamic> replaceWithAdminLoginView([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.adminMode,
+    return replaceWith<dynamic>(Routes.adminLoginView,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

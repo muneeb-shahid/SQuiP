@@ -7,12 +7,12 @@ import '../../Services/Constants/constantsColors.dart';
 import '../../Services/Constants/fontsConstant.dart';
 import '../bottomNavView.dart';
 
-class UserLoginView extends StatefulWidget {
+class AdminLoginView extends StatefulWidget {
   @override
-  _UserLoginViewState createState() => _UserLoginViewState();
+  _AdminLoginViewState createState() => _AdminLoginViewState();
 }
 
-class _UserLoginViewState extends State<UserLoginView> {
+class _AdminLoginViewState extends State<AdminLoginView> {
   bool _isObscured = true;
 
   void _toggleObscure() {
@@ -89,12 +89,14 @@ class _UserLoginViewState extends State<UserLoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar_Constants().appBar_Func("Login Page"),
+    
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(left: 10, right: 10),
+            padding:  EdgeInsets.only(left: 10, right: 10),
             child: Column(
               children: [
+             
                 Form(
                   key: _formKey,
                   child: Column(
@@ -115,9 +117,7 @@ class _UserLoginViewState extends State<UserLoginView> {
                             ),
                           ),
                           border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                            color: Colors.black,
-                          )),
+                              borderSide: BorderSide(color: Colors.black,)),
                           prefixIcon:
                               Icon(Icons.email_outlined, color: Colors.black),
                         ),
@@ -140,8 +140,8 @@ class _UserLoginViewState extends State<UserLoginView> {
                           ),
                           border: OutlineInputBorder(
                               borderSide: BorderSide(color: Colors.black)),
-                          prefixIcon: Icon(Icons.lock_open_outlined,
-                              color: Colors.black),
+                          prefixIcon:
+                              Icon(Icons.lock_open_outlined, color: Colors.black),
                           suffixIcon: GestureDetector(
                             onTap: _toggleObscure,
                             child: Icon(
@@ -191,8 +191,7 @@ class _UserLoginViewState extends State<UserLoginView> {
                               },
                               child: Container(
                                 alignment: Alignment.center,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.06,
+                                height: MediaQuery.of(context).size.height * 0.06,
                                 width: MediaQuery.of(context).size.width * 0.90,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
@@ -215,6 +214,7 @@ class _UserLoginViewState extends State<UserLoginView> {
                           ),
                         ],
                       ),
+      
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.05,
                       ),
