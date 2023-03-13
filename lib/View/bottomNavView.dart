@@ -21,7 +21,7 @@ class _BottomNavState extends State<BottomNav> {
       
 
     ),
-    Center(child: GoogleMapClass()),
+    Center(child: CurrentLocationScreen()),
     // Center(
     //   child: Text("Screen 2"),
     // ),

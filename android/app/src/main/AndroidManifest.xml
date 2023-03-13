@@ -4,6 +4,8 @@
         android:label="app_"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+           <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyAxo0MYVz1wyzVhtej_PXoRyPSHAQVdv10"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -30,7 +32,6 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
-             <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyD1YRm8TYexsEohi__w7KswGwsD9MPkJ-Q"/>
+            
     </application>
 </manifest>

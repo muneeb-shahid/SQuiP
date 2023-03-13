@@ -9,10 +9,6 @@ import 'View/SplashView.dart';
 import 'View/startingView.dart';
 import 'app/app.locator.dart';
 import 'app/app.router.dart';
-// void main() async  {
-//   await setupLocator();
-//   runApp(const MyApp());
-// }
 
 void main() async {
   await setupLocator();
@@ -35,7 +31,7 @@ class MyApp extends StatelessWidget {
       onGenerateRoute: StackedRouter().onGenerateRoute,
       title: 'SQuiP',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.white,
       ),
       home: SplashView(),
     );

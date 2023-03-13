@@ -25,7 +25,7 @@ import 'package:stacked_services/stacked_services.dart' as _i15;
 class Routes {
   static const splashView = '/';
 
-  static const googleMapClass = '/google-map-class';
+  static const currentLocationScreen = '/current-location-screen';
 
   static const userLoginView = '/user-login-view';
 
@@ -51,7 +51,7 @@ class Routes {
 
   static const all = <String>{
     splashView,
-    googleMapClass,
+    currentLocationScreen,
     userLoginView,
     signUpPage,
     bottomNav,
@@ -73,8 +73,8 @@ class StackedRouter extends _i1.RouterBase {
       page: _i2.SplashView,
     ),
     _i1.RouteDef(
-      Routes.googleMapClass,
-      page: _i3.GoogleMapClass,
+      Routes.currentLocationScreen,
+      page: _i3.CurrentLocationScreen,
     ),
     _i1.RouteDef(
       Routes.userLoginView,
@@ -129,9 +129,9 @@ class StackedRouter extends _i1.RouterBase {
         settings: data,
       );
     },
-    _i3.GoogleMapClass: (data) {
+    _i3.CurrentLocationScreen: (data) {
       return MaterialPageRoute<dynamic>(
-        builder: (context) => const _i3.GoogleMapClass(),
+        builder: (context) => const _i3.CurrentLocationScreen(),
         settings: data,
       );
     },
@@ -224,14 +224,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> navigateToGoogleMapClass([
+  Future<dynamic> navigateToCurrentLocationScreen([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return navigateTo<dynamic>(Routes.googleMapClass,
+    return navigateTo<dynamic>(Routes.currentLocationScreen,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,
@@ -406,14 +406,14 @@ extension NavigatorStateExtension on _i15.NavigationService {
         transition: transition);
   }
 
-  Future<dynamic> replaceWithGoogleMapClass([
+  Future<dynamic> replaceWithCurrentLocationScreen([
     int? routerId,
     bool preventDuplicates = true,
     Map<String, String>? parameters,
     Widget Function(BuildContext, Animation<double>, Animation<double>, Widget)?
         transition,
   ]) async {
-    return replaceWith<dynamic>(Routes.googleMapClass,
+    return replaceWith<dynamic>(Routes.currentLocationScreen,
         id: routerId,
         preventDuplicates: preventDuplicates,
         parameters: parameters,

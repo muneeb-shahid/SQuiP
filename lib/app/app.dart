@@ -20,7 +20,7 @@ import '../View/bottomNavView.dart';
 import '../ViewModel/UserModeViewModel/UserloginViewmodel.dart';
 @StackedApp(routes: [
   MaterialRoute(page: SplashView,initial: true),
-  MaterialRoute(page: GoogleMapClass),
+  MaterialRoute(page: CurrentLocationScreen),
   MaterialRoute(page: UserLoginView),
   MaterialRoute(page: SignUpPage),
   MaterialRoute(page: BottomNav),

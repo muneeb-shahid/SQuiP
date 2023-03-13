@@ -49,6 +49,9 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   google_maps_flutter_web: ^0.4.0+7
   flutter_local_notifications: ^13.0.0
+  flutter_geocoder: ^0.2.2-nullsafety
+  geocoding: ^2.0.4
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:
