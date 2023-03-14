@@ -1,7 +1,7 @@
 import 'package:app_/View/UserModeView/signupview.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
+import '../UserModeView/googlemap.dart';
 import '../../Services/Constants/appBarConstant.dart';
 import '../../Services/Constants/constantsColors.dart';
 import '../../Services/Constants/fontsConstant.dart';
@@ -34,7 +34,7 @@ class _AdminLoginViewState extends State<AdminLoginView> {
           Navigator.pushReplacement(
               context,
               MaterialPageRoute(
-                builder: (context) => BottomNav(),
+                builder: (context) => CurrentLocationScreen(),
               )).then((value) {
             setState(() {
               loading = false;

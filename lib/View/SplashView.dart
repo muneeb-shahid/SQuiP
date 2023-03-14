@@ -16,7 +16,7 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       onViewModelReady: (viewModel) {
-        Timer(Duration(seconds: 8), () {
+        Timer(Duration(seconds: 11), () {
           viewModel.navigateToTheStartingView();
         });
       },

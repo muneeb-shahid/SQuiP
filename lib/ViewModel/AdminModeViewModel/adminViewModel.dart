@@ -13,6 +13,6 @@ class AdminViewModel extends BaseViewModel {
   }
 
   navigateToTheLoginScreen() {
-    navigationService.navigateToUserLoginView();
+    navigationService.navigateToAdminLoginView();
   }
 }
